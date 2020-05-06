@@ -23,7 +23,7 @@ When you don't want to break production...
 
 4.) run the script `quicktest.sh` ( **you may need to adjust the timestamp in the data packet**)
 
-5.) search in the teams index for the data packet that you sent.
+5.) search in the teams index for the data packet that you sent. `index= teams`  search time for alltime.
 
 
 

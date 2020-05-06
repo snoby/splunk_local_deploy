@@ -5,6 +5,7 @@
 .DEFAULT_GOAL := compress
 
 
+
 uncompress:
 	mkdir -p temp
 	cd temp && tar zxvf ../configs/lma.tgz

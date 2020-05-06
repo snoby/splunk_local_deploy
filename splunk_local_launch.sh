@@ -37,4 +37,4 @@ docker run -d                                             \
   splunk/splunk:latest
 
 
-echo "Need to wait for the splunk service to be available...."
+echo "Need to wait for the splunk service to be available.... check with 'docker logs -f splunk' "
