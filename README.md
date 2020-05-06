@@ -17,7 +17,7 @@ When you don't want to break production...
 ## Instructions TLDR;
 1.) Run the splunk\_local\_launch.sh script file - this runs a docker container that is ephemeral.
 
-2.) run `docker logs -f splunk` until the ansible script completes.  Or you could just wait until the web interface is up.
+2.) run `docker logs -f splunk` until the  the splunk service comes up.  In the container there is an ansible script that setups the service.  Or you could just wait until the web interface is up.
 
 3.) log on to http://localhost:8000 username:admin password:password123
 
