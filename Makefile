@@ -5,6 +5,16 @@
 .DEFAULT_GOAL := compress
 
 
+capture:
+	@mkdir -p output
+	echo "compressing active apps"
+	@docker exec -u 0 -it splunk /bin/bash -c 'cd /opt/splunk/etc/apps/ && tar czvf /opt/splunk_httpinput.tgz splunk_httpinput'
+	@docker exec -u 0 -it splunk /bin/bash -c 'cd /opt/splunk/etc/apps/ && tar czvf /opt/lma.tgz lma'
+	@echo "copying compressed configs to temp directory"
+	@docker cp splunk:/opt/splunk_httpinput.tgz output/
+	@docker cp splunk:/opt/lma.tgz output/
+	@echo "You must now copy the files in the output directory to the configs directory... "
+
 
 uncompress:
 	mkdir -p temp
